@@ -161,7 +161,15 @@ programs.zsh = {
      jdt-language-server
      typescript-language-server
      nil
-   ];
+
+     # formateadores
+     black
+     rustfmt
+     prettier
+     stylua
+     nixfmt
+     google-java-format
+];
 
 
      # Limpiar generaciones antiguas automaticas
