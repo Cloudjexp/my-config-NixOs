@@ -148,8 +148,31 @@ programs.zsh = {
      papirus-icon-theme
      alacritty
      git
+     python3
+     nerd-fonts.jetbrains-mono
+     starship
+     neovim
+
+
+    # LSP
+     lua-language-server
+     basedpyright
+     rust-analyzer
+     jdt-language-server
+     typescript-language-server
+     nil
    ];
 
+
+     # Limpiar generaciones antiguas automaticas
+      nix.gc = {
+	automatic = true;
+	dates = "weekly";
+	options = "--delete-older-than 14d";
+      };
+
+     # Maximo de generaciones en el menu de arranque
+       boot.loader.systemd-boot.configurationLimit = 5;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.  # programs.mtr.enable = true;
   # programs.gnupg.agent = {
