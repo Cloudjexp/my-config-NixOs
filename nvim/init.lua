@@ -21,28 +21,50 @@ vim.opt.signcolumn = "yes"
 vim.opt.cursorline = true
 
 -- ==========================================
+-- DIAGNOSTICO LSP
+-- ==========================================
+
+vim.diagnostic.config({
+	virtual_text = {
+		spacing = 2,
+		prefix = "●",
+	},
+
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+
+	severity_sort = true,
+
+	float = {
+		border = "rounded",
+		source = "if_many",
+	},
+})
+
+-- ==========================================
 -- lazy.nvim
 -- ==========================================
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.uv.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "--branch=stable",
-    "https://github.com/folke/lazy.nvim.git",
-    lazypath,
-  })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"--branch=stable",
+		"https://github.com/folke/lazy.nvim.git",
+		lazypath,
+	})
 end
 
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  spec = {
-    { import = "plugins" },
-  },
+	spec = {
+		{ import = "plugins" },
+	},
 })
 
 require("config.theme").setup()
@@ -51,9 +73,9 @@ require("config.theme").setup()
 
 require("config.keymaps")
 vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    if vim.fn.argc() == 0 and vim.fn.line2byte("$") == -1 then
-      require("alpha").start()
-    end
-  end,
+	callback = function()
+		if vim.fn.argc() == 0 and vim.fn.line2byte("$") == -1 then
+			require("alpha").start()
+		end
+	end,
 })
