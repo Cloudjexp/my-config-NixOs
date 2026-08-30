@@ -34,13 +34,142 @@ return {
 				},
 
 				{
+					"<leader>ff",
+					desc = "Buscar archivos",
+				},
+				{
+					"<leader>fg",
+					desc = "Buscar texto",
+				},
+
+				{
+					"<leader>fb",
+					desc = "Buscar buffers",
+				},
+
+				{
+					"<leader>fh",
+					desc = "Buscar ayuda",
+				},
+
+				-- ====================================
+				-- BUFFERS
+				-- ====================================
+
+				{
+					"<leader>b",
+					group = "buffers",
+				},
+
+				{
+					"<leader>bp",
+					desc = "Buffer anterior",
+				},
+
+				{
+					"<leader>bd",
+					desc = "cerrar buffer",
+				},
+
+				--- ===================================
+				--- SPLITS
+				--- ===================================
+
+				{
+					"<leader>s",
+					group = "Splits",
+				},
+
+				{
+					"<leader>sv",
+					desc = "Dividir vertical",
+				},
+
+				{
+					"<leader>sh",
+					desc = "Dividir horizontal",
+				},
+
+				{
+					"<leader>sx",
+					desc = "Cerrar ventana",
+				},
+
+				--- ===============================
+				--- CODIGO / LSP
+				--- ===============================
+
+				{
+					"<leader>c",
+					group = "Código",
+				},
+
+				{
+					"<leader>ca",
+					desc = "Acción de código",
+				},
+
+				{
+					"<leader>cf",
+					desc = "Formatear archivo",
+				},
+
+				{
+					"<leader>rn",
+					desc = "Renombrar símbolo",
+				},
+
+				{
+					"<leader>d",
+					desc = "Mostrar diagnóstico",
+				},
+
+				--- ================================
+				--- GIT
+				--- ================================
+
+				{
+					"<leader>h",
+					group = "Git / Hunk",
+				},
+
+				{
+					"<leader>hs",
+					desc = "Stage cambio",
+				},
+
+				{
+					"<leader>hr",
+					desc = "Reset cambio",
+				},
+
+				{
+					"<leader>hp",
+					desc = "Ver cambio",
+				},
+
+				{
+					"<leader>hb",
+					desc = "Git blame",
+				},
+
+				--- =====================================
+				--- GENERAL
+				--- =====================================
+
+				{
 					"<leader>e",
 					desc = "Explorador",
 				},
 
 				{
-					"<leader>h",
-					group = "Git / Hunk",
+					"<leader>w",
+					desc = "Guardar",
+				},
+
+				{
+					"<leader>q",
+					desc = "Salir",
 				},
 			})
 		end,
