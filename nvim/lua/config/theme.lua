@@ -21,6 +21,30 @@ function M.setup()
 	vim.cmd("set background=dark")
 
 	local highlights = {
+		-- Indentacion
+		RainbowPink = {
+			fg = "#e84b8a",
+		},
+
+		RainbowPurple = {
+			fg = "#c678dd",
+		},
+
+		RainbowBlue = {
+			fg = "#8ab4f8",
+		},
+
+		RainbowCyan = {
+			fg = "#7dcfff",
+		},
+
+		RainbowGreen = {
+			fg = "#a6d189",
+		},
+
+		RainbowYellow = {
+			fg = "#e5c07b",
+		},
 		-- Interfaz
 		Normal = {
 			fg = colors.fg,
