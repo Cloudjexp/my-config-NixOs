@@ -112,7 +112,7 @@ programs.zsh = {
     ll = "eza -la --icons";
     lt = "eza -la --icons --sort=modified";
     tree = "eza --tree --icons";
-
+    off = "shutdown now";
     cat = "bat";
     cls = "clear";
 
@@ -155,6 +155,8 @@ programs.zsh = {
      gh
      rustc
      cargo
+     kora-icon-theme
+     candy-icons
 
     # LSP
      lua-language-server
