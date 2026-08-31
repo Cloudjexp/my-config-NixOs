@@ -152,7 +152,9 @@ programs.zsh = {
      nerd-fonts.jetbrains-mono
      starship
      neovim
-
+     gh
+     rustc
+     cargo
 
     # LSP
      lua-language-server
@@ -161,6 +163,9 @@ programs.zsh = {
      jdt-language-server
      typescript-language-server
      nil
+
+     gcc
+     tree-sitter
 
      # formateadores
      black
