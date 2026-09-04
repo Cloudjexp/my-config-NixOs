@@ -16,7 +16,9 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
+  networking.extraHosts = ''
+    192.168.1.15 homepage.home
+    '';
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -74,10 +76,8 @@
 	zoxide
 	librewolf
 	brave
-	
-	kitty
-
 	btop
+	kitty
     ];
   };
 
@@ -157,6 +157,10 @@ programs.zsh = {
      cargo
      kora-icon-theme
      candy-icons
+     vscodium
+     obsidian
+     lazygit
+ 
 
     # LSP
      lua-language-server
